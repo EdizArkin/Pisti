@@ -58,7 +58,7 @@ public class CardOperation {
         int indexOfResult = 0;
         for(int i=0; i<originalHand.length; i++){
             if(i != index){
-                System.out.println("Card::"+originalHand[i].toString());
+                //System.out.println("Card::"+originalHand[i].toString());
                 resultHand[indexOfResult] = originalHand[i];
                 indexOfResult = indexOfResult + 1;
             }

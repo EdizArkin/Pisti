@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -205,12 +207,14 @@ public class Game {
     }
 
     // Test scoreList
-    public void checkScoreBoard(int winnerScore){
-        /*FileReader reader;
+   public void checkScoreBoard(int winnerScore){
+       /* FileReader reader;
         try {
             reader = new FileReader("Scoreboard.txt");
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
-        }*/
+        }
+        */
+
     }
 }
