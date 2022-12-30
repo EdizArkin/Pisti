@@ -1,6 +1,10 @@
 import java.util.Arrays;
 
 public class Player {
+    /*
+    This class contains the player's properties
+     and the function by which the cards he will win are calculated.
+     */
     private Card[] hand;
     private String playerName;
     private int score;

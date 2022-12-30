@@ -1,6 +1,10 @@
 import java.util.Random;
 
 public class CardOperation {
+    /*
+    In this class, there are functions such as shuffling,
+     cutting, showing the cards and discard the cards from hand.
+     */
     public final String[] suits = {"♠","♣","♥","♦"};
     public final String[] values = {"A","2","3","4","5","6","7","8","9","10","J","K","Q"};
 
