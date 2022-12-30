@@ -1,5 +1,5 @@
 public class Card {
-    // the propertys of the cards are defined
+    // The propertys of the cards are defined in this class.
     public String suit;
     public String value;
     public Card(String suit, String value){
@@ -18,6 +18,7 @@ public class Card {
     public void setValue(String value) {
         this.value = value;
     }
+
     @Override
     public String toString() {
         String output = suit+value;

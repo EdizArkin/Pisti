@@ -1,16 +1,14 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Player {
     private Card[] hand;
     private String playerName;
     private int score;
-    private List<Card> collectedCardList;
+    private Card[] collectedCards;
 
-    public Player(String name){
+    public Player(String name) {
         this.playerName = name;
-        this.collectedCardList = new ArrayList<Card>();
+        collectedCards = new Card[52];
     }
     public Card[] getHand() {
         return hand;
@@ -18,7 +16,6 @@ public class Player {
     public void setHand(Card[] hand) {
         this.hand = hand;
     }
-
     public String getPlayerName() {
         return playerName;
     }
@@ -31,29 +28,32 @@ public class Player {
     public void setScore(int score) {
         this.score = score;
     }
-    public String showMyHand(){
+    public String showMyHand() {
         return Arrays.toString(this.hand);
     }
-    public List<Card> getCollectedCardList() {
-        return collectedCardList;
+    public Card[] getCollectedCards() {
+        return collectedCards;
     }
-    public void setCollectedCardList(List<Card> collectedCardList) {
-        this.collectedCardList = collectedCardList;
+    public void setCollectedCards(Card[] collectedCards) {
+        this.collectedCards = collectedCards;
     }
 
-    // This function counts the points of the cards that the player collects in his inventory.
-    public int calculatePlayerScore(){
+    // This function counts the points of the cards that the player collects in his inventory
+    public int calculatePlayerScore() {
         int result = 0;
-        for(Card card : collectedCardList){
-            if(card.getSuit().equals("♦") && card.getValue().equals("10")){
-                result=result+3;
+        for (Card card : this.collectedCards) {
+            if (card != null) {
+                if (card.getSuit().equals("♦") && card.getValue().equals("10")) {
+                    result = result + 3;
+                } else if (card.getSuit().equals("♣") && card.getValue().equals("2")) {
+                    result = result + 2;
+                } else {
+                    result = result + 1;
+                }
             }
-            else if(card.getSuit().equals("♣") && card.getValue().equals("2")){
-                result=result+2;
-            }else{
-                result=result+1;
-            }
+
         }
+        System.out.println("Score of collected cards : " + result);
         result = result + this.score;
         return result;
     }

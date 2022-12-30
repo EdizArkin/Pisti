@@ -13,5 +13,4 @@ public class PlayerOperation {
         }
         return new Player(name);
     }
-
 }

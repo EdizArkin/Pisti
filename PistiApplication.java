@@ -8,4 +8,5 @@ public class PistiApplication {
         Game newGame = new Game();
         newGame.playGame(cardArray);
     }
+
 }
