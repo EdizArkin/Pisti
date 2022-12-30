@@ -225,6 +225,8 @@ public class Game {
      respectively, if the player has won each time the game is played.
      */
     public void checkScoreBoard(int winnerScore){
+        System.out.println("--------TOP SCORE LIST--------");
+        System.out.println(" ");
         String[][] scoreBoard = new String[10][2];
         File f = new File("scoreboard.txt");
 
